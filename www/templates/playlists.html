@@ -1,0 +1,388 @@
+<ion-view view-title="Playlists">
+  
+     
+
+     <ion-content class=" item-content" style="background-color:white;">
+       
+
+     <div style="background-image:url('img/og.png');background-repeat: no-repeat;background-size:100%;width:100%;margin-top:0px;padding:0px;height:65px;
+          ">
+        
+         
+     </div>
+         <center>
+         <label class="item item-input" style="padding:0px;background-color:whitesmoke;margin:15px;border-width:0px;border-radius:10px;padding-left:17px;margin-bottom:20px;margin-top:20px;">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" ng-click="goTo" style="color:#014b7a;" ng-model="input.filterUser" placeholder="Search">
+          </label>
+         
+         </center>
+       
+        
+      
+          <ion-item class="item-avatar" ng-show="search" ng-repeat="user in groups | filter:input.filterUser">
+            <img src="{{user.avatar}}">           
+            <h2>{{user.name}}</h2>   
+          </ion-item>        
+      
+         
+         
+         
+         
+      <div> 
+       <ion-scroll scrollbar-y="true" overflow-scroll="true">       
+       <center>   
+           
+         <div width="100%">
+             <div>
+              
+       
+            
+
+        <!--<img ng-click="openInAppBrowser()" src="img/fb.png" width="70px" style="margin-right:20px;"/>-->
+        <a href="#demo1" data-toggle="collapse"><img ng-show="fb" ng-click="func(1)" src="img/fb.png" width="70px"/></a>
+        <a href="#demo2" data-toggle="collapse"> <img ng-show="insta" ng-click="func(2)" src="img/insta.png" width="70px" /></a>
+         <a href="#demo3" data-toggle="collapse"><img ng-show="twitter" ng-click="func(3)" src="img/twitter1.png" width="70px"/></a>
+         
+          <span ng-show="break1"><br/><br/></span>
+          <a href="#demo9" data-toggle="collapse"> <img ng-show="google" ng-click="func(9)" src="img/google.png" width="70px"/></a>
+          <a href="#demo4" data-toggle="collapse"> <img ng-show="gplus" ng-click="func(4)" src="img/googleplus.png" width="70px"/></a>
+          <a href="#demo7" data-toggle="collapse"><img ng-show="youtube" ng-click="func(7)"src="img/youtube.png" width="70px"/></a>
+        
+        <span ng-show="break1"><br/><br/></span>
+        
+        <div id="demo" class="collapse" style="margin-bottom: 10px;">
+         <a href="#demo10" data-toggle="collapse"><img ng-show="lin" ng-click="func(10)" src="img/lin.png" width="70px"/></a>
+         <a href="#demo11" data-toggle="collapse"><img ng-show="tum" ng-click="func(11)" src="img/tum.png" width="70px"/></a>
+       <a href="#demo8" data-toggle="collapse"><img ng-show="what" ng-click="func(8)" src="img/pint.png" width="70px"/></a>
+       
+         
+         <span ng-show="break1"><br/><br/></span>
+          <a href="#demo5" data-toggle="collapse"><img ng-show="micro" ng-click="func(5)" src="img/microsoft.png" width="70px"/></a>
+         
+         <a href="#demo12" data-toggle="collapse"><img ng-show="snap" ng-click="func(12)" src="img/snapchat.png" width="70px"/></a>
+         <a href="#demo6" data-toggle="collapse"><img ng-show="skpe" ng-click="func(6)" src="img/skype.png" width="70px"/></a>
+       
+           
+        </div>
+       
+        </div>
+        
+        <a href="#demo" ng-show="demo" data-toggle="collapse"><img src="img/more app.png" width="260px"/>  </a>
+        
+       
+
+       
+         
+         </div> </center>
+         
+         <center>    
+             
+         <div ng-show="slide">
+            <ion-slide-box auto-play="true" does-continue="true" style="height:140px;color:#014b7a"> 
+               
+                <ion-slide><br/>
+                    <img src="img/slide.png" style="width: 230px;"/>
+                            
+                 </ion-slide>
+
+                <ion-slide><br/>
+                  
+                     <img src="img/ind.gif" style="width: 140px;"/>
+                            
+                 </ion-slide>
+            </ion-slide-box>
+        </div><br/>
+         </center> 
+
+         
+         <center>        
+  <div id="demo1" class="collapse"> 
+    <form style="background-color:#fff;width:84%;padding:20px;color:#014b7a;" >
+       <span  ng-click="openFb(1)">Delete Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+      <span ng-click="openFb(2)">Deactivate Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+     <span ng-click="openFb(3)">Recover Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+     <br/><br/>
+     <span ng-click="openFb(4)">Reset Password&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/>
+    
+  </form>
+      <div>
+      <img src="img/bck.png" width="30px;" ng-click="func(1)"/>
+      </div><br/><br/><br/>
+  </div>   
+             
+  
+    <div id="demo2" class="collapse">
+     <form style="background-color:#fff;width:84%;padding:20px;color:#014b7a;" >
+      <span ng-click="openInsta(0)">Account Info&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+       <span ng-click="openInsta(1)">Delete Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+     <span ng-click="openInsta(2)">Temporarily Disable Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+      <span ng-click="openInsta(3)">Reset Password&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+      <span ng-click="openInsta(4)">Recover Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    
+      <br/>
+    
+  </form>
+      <div>
+      <img src="img/bck.png" width="30px;" ng-click="func(1)"/>
+      </div><br/><br/><br/>
+  </div> 
+             
+             
+     <div id="demo3" class="collapse"> 
+      <form style="background-color:#fff;width:84%;padding:20px;color:#014b7a;" >
+       <span ng-click="openTwitter(1)">Deactivate Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+      <span ng-click="openTwitter(2)">Change Password&nbsp;<img src="img/url.png" style="width:20px"></span>
+     <br/><br/>
+      <span ng-click="openTwitter(3)">Reset Password (email,Num,Id)&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+    <span ng-click="openTwitter(6)">Find Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+      <span ng-click="openTwitter(4)">Direct Messages&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+      <span ng-click="openTwitter(5)">Restore Account Help&nbsp;<img src="img/url.png" style="width:20px"></span>
+    
+      <br/>
+    
+  </form>
+      <div>
+      <img src="img/bck.png" width="30px;" ng-click="func(1)"/>
+      </div><br/><br/><br/>
+  </div> 
+             
+             
+  <div id="demo4" class="collapse"> 
+       <form style="background-color:#fff;width:84%;padding:20px;color:#014b7a;" >
+       <span ng-click="openGp(1)">Delete Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+      <span ng-click="openGp(2)">Change Password&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/>
+    
+  </form>
+      <div>
+      <img src="img/bck.png" width="30px;" ng-click="func(1)"/>
+      </div><br/><br/><br/>
+  </div> 
+             
+             
+   <div id="demo5" class="collapse"> 
+       <form style="background-color:#fff;width:84%;padding:20px;color:#014b7a;" >
+       <span ng-click="openMs(1)">Delete Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+      <span ng-click="openMs(2)">Change Password (Email)&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/>
+     <span ng-click="openMs(3)">Recover Microsoft Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/>
+    
+  </form>
+      <div>
+      <img src="img/bck.png" width="30px;" ng-click="func(1)"/>
+      </div><br/><br/><br/>
+  </div> 
+             
+             
+   <div id="demo6" class="collapse"> 
+      <form style="background-color:#fff;width:84%;padding:20px;color:#014b7a;" >
+       <span ng-click="openSk(1)">Delete Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+      <span ng-click="openSk(2)">Change Password (Email)&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/>
+     <br/>
+     <span ng-click="openSk(3)">Recover Skype Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/>
+  </form>
+      <div>
+      <img src="img/bck.png" width="30px;" ng-click="func(1)"/>
+      </div><br/><br/><br/>
+  </div> 
+             
+             
+  <div id="demo7" class="collapse"> 
+      <form style="background-color:#fff;width:84%;padding:20px;color:#014b7a;" >
+       <span ng-click="openyt(1)">Delete Brand Accounts (Google link)&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+    <span ng-click="openyt(2)">Delete Channels (Youtube link)&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+    <span ng-click="openyt(3)">Rename Channels(Brand Account)&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+    <span ng-click="openyt(4)">Rename Channels (Personal Account)&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+    
+  </form>
+      <div>
+      <img src="img/bck.png" width="30px;" ng-click="func(1)"/>
+      </div><br/><br/><br/>
+  </div> 
+             
+             
+  <div id="demo8" class="collapse"> 
+       <form style="background-color:#fff;width:84%;padding:20px;color:#014b7a;" >
+       <span ng-click="openWhat(1)">Recover Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+    <span ng-click="openWhat(2)">Password Reset (Email)&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+    <span ng-click="openWhat(3)">Pinterest Help&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+    
+  </form>
+      <div>
+      <img src="img/bck.png" width="30px;" ng-click="func(1)"/>
+      </div><br/><br/><br/>
+  </div> 
+             
+ <div id="demo10" class="collapse"> 
+       <form style="background-color:#fff;width:84%;padding:20px;color:#014b7a;" >
+       <span ng-click="openLin(1)">Delete LinkedIn&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+      <span ng-click="openLin(2)">Change Password&nbsp;<img src="img/url.png" style="width:20px"></span>
+      <br/><br/>
+      <span ng-click="openLin(3)">Reset Password (Email)&nbsp;<img src="img/url.png" style="width:20px"></span>
+      <br/><br/>
+      <span ng-click="openLin(4)">Recover Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/>
+    
+  </form>
+      <div>
+      <img src="img/bck.png" width="30px;" ng-click="func(1)"/>
+      </div><br/><br/><br/>
+  </div> 
+             
+             
+     <div id="demo12" class="collapse"> 
+       <form style="background-color:#fff;width:84%;padding:20px;color:#014b7a;" >
+        <span ng-click="openSnap(5)">Manage Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+        <br/><br/>
+       <span ng-click="openSnap(1)">Delete Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+      <span ng-click="openSnap(2)">Change Password&nbsp;<img src="img/url.png" style="width:20px"></span>
+      <br/><br/>
+      <span ng-click="openSnap(6)">Unlock Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+        <br/><br/>
+      <span ng-click="openSnap(3)">Reset Password (Email)&nbsp;<img src="img/url.png" style="width:20px"></span>
+      <br/><br/>
+    
+  </form>
+      <div>
+      <img src="img/bck.png" width="30px;" ng-click="func(1)"/>
+      </div><br/><br/><br/>
+  </div> 
+             
+             
+             
+             
+  <div id="demo11" class="collapse"> 
+       <form style="background-color:#fff;width:84%;padding:20px;color:#014b7a;" >
+       <span ng-click="openTum(1)">Delete Account&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+      <span ng-click="openTum(2)">Reset Password (Email)&nbsp;<img src="img/url.png" style="width:20px"></span>
+      <br/><br/>
+      <span ng-click="openTum(3)">Change Password&nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/>
+    
+  </form>
+      <div>
+      <img src="img/bck.png" width="30px;" ng-click="func(1)"/>
+      </div><br/><br/><br/>
+  </div> 
+          
+             
+  
+   <div id="demo9" class="collapse"> 
+       <form style="background-color:#fff;width:84%;padding:20px;color:#014b7a;" >
+       <span ng-click="openGoogle(1)">Change Password &nbsp;<img src="img/url.png" style="width:20px"></span>
+    <br/><br/>
+      <span ng-click="openGoogle(2)">Account Recovery &nbsp;<img src="img/url.png" style="width:20px"></span>
+      <br/><br/>
+      <span ng-click="openGoogle(3)">Delete Account &nbsp;<img src="img/url.png" style="width:20px"></span>
+      <br/><br/>
+      <span ng-click="openGoogle(4)">Change Phone no (Personal Info) &nbsp;<img src="img/url.png" style="width:20px"></span>
+      <br/><br/>
+      <span ng-click="openGoogle(5)">Your Activities &nbsp;<img src="img/url.png" style="width:20px"></span>
+      <br/><br/><br/>
+      <a href="#ca" data-toggle="collapse"><p style="color:green;">Controlling Activities &nbsp;<img src="img/down.png" style="width:20px"></p></a>  <br/>
+      <div id="ca" class="collapse" style="border:5px solid lightgrey">  <br/>
+       1.&nbsp;<span style="color:#014b7a" ng-click="openGoogle(7)">Activity Controls &nbsp;<img src="img/url.png" style="width:20px"></span><br/><br/>
+       <span style="color:green;">   2. Scroll to Top Right Corner <br/><br/>
+          3. Sign In to your Google account.<br/><br/>
+      4. <img src="img/1.png" width="200px"><br/><br/>
+      5. <img src="img/2.png" width="200px"><br/><br/>
+       6. <img src="img/3.png" width="200px"><br/><br/>
+      7. <img src="img/4.png" width="200px"><br/><br/>
+       8. <img src="img/5.png" width="200px"><br/><br/>
+       9. <img src="img/6.png" width="200px"></span><br/><br/>
+      </div> 
+      <br/>
+      <a href="#da" data-toggle="collapse"><p style="color:green;">Deleting Activities &nbsp;<img src="img/down.png" style="width:20px"><br/></p></a>
+        
+
+       <div id="da" class="collapse" style="border:5px solid lightgrey"> <br/> 
+          1.&nbsp;<span style="color:#014b7a" ng-click="openGoogle(6)">Delete Activities&nbsp;<img src="img/url.png" style="width:20px"></span><br/>
+          <br/><span style="color:green;"> 2. Sign In to your Google account.<br/><br/>
+      3. <img src="img/ss1.png" width="200px"><br/><br/>
+      4. <img src="img/ss2.png" width="200px"></span><br/>
+       </div>
+   <br/>
+    
+  </form>
+      <div>
+      <img src="img/bck.png" width="30px;" ng-click="func(1)"/>
+      </div><br/><br/><br/>
+  </div> 
+          
+             
+<!--             <div id="demo10" class="collapse"> 
+       <form style="background-color:#fff;width:84%;padding:20px;color:#014b7a;" >
+       <span ng-click="openInAppBrowser()">Delete Facebook Accout</span>
+    <br/><br/>
+      <span ng-click="openInAppBrowser()">Deactivate Facebook Accout</span>
+    <br/>
+    
+  </form>
+      <div>
+      <img src="img/bck.png" width="30px;" ng-click="func(1)"/>
+      </div>
+  </div> 
+             
+             <div id="demo11" class="collapse"> 
+       <form style="background-color:#fff;width:84%;padding:20px;color:#014b7a;" >
+       <span ng-click="openInAppBrowser()">Delete Facebook Accout</span>
+    <br/><br/>
+      <span ng-click="openInAppBrowser()">Deactivate Facebook Accout</span>
+    <br/>
+    
+  </form>
+      <div>
+      <img src="img/bck.png" width="30px;" ng-click="func(1)"/>
+      </div>
+  </div> -->
+
+             
+             
+         </center>
+         
+         
+         
+       </ion-scroll>    
+      </div>
+         
+     </ion-content>
+ 
+       <ion-footer-bar style="background-color:transaparent;height:40px;text-align:center;border-top-left-radius:50px;border-top-right-radius:50px;bottom:50px;">
+           <div style="width:100%;text-align: center;">
+            <img ng-click="openMsg()" src="img/msg.png" width="50px"/>
+            <img ng-click="showActionsheet()"  src="img/accnt.png" style="width:70px;"/>
+            <img ng-click="showI()" src="img/info.png" style="width:50px;"/>
+           </div>
+        </ion-footer-bar>
+        <ion-footer-bar style="background-color:#014b7a;height:40px;text-align:center;border-top-left-radius:50px;border-top-right-radius:50px;">
+                <span style="font-size: 12px;color:white;text-align:center;" class="title">Indrajit | OYG | 2018 </span> 
+        </ion-footer-bar>
+</ion-view>
